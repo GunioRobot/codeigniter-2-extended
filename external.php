@@ -2,7 +2,7 @@
 
 	error_reporting(E_ALL);
 	date_default_timezone_set('GMT');
-	
+
 	$system_path = "system";
 	$application_folder = "application";
 
@@ -42,7 +42,7 @@
 		require(BASEPATH.'core/Common'.EXT);
 		require(BASEPATH.'core/Compat'.EXT);
 		require(APPPATH.'config/constants'.EXT);
-		
+
 
 		set_error_handler('_exception_handler');
 
@@ -71,7 +71,7 @@
 			load_class('Loader', 'core');
 			require(BASEPATH.'core/Base4'.EXT);
 		}
-		
+
 		require BASEPATH.'core/Controller'.EXT;
 		$CI = new CI_Controller();
 

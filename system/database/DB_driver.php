@@ -747,12 +747,12 @@ class CI_DB_driver {
 	 */
 	function list_tables($constrain_by_prefix = FALSE)
 	{
-		## 
+		##
 		## Removed by: Beau Frusetta <beau.frusetta@gmail.com>
 		## Why: Removed because when running a chain of migrations, the driver stores a cached version of the table list, which will prevent
 		## 			some tasks from running properly in succession.
 		##
-		
+
 		// Is there a cached result?
 		// if (isset($this->data_cache['table_names']))
 		// {

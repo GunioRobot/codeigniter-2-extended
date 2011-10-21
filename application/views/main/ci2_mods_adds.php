@@ -14,14 +14,14 @@
 			<li><strong>$this->model_name->destroy()</strong></li>
 		</ul>
 	</li>
-	
+
 	<li>
 		<strong>application/core/MY_Controller</strong>
 		<ul>
 			<li><strong>$this->my_controller->is_installed()</strong> - this function was created to check for a proper installation of this modified framework</li>
 		</ul>
 	</li>
-	
+
 	<li>
 		<strong>application/core/MY_Config</strong>
 		<ul>

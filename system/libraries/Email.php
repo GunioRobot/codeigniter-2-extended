@@ -1551,7 +1551,7 @@ class CI_Email {
 		fputs($fp, $this->_finalbody);
 
 		$status = pclose($fp);
-	
+
 		if (version_compare(PHP_VERSION, '4.2.3') == -1)
 		{
 			$status = $status >> 8 & 0xFF;

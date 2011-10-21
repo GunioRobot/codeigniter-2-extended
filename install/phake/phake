@@ -9,14 +9,14 @@ require dirname(__FILE__) . '/lib/builder.php';
 phake\Builder::$global = new phake\Builder;
 
 try {
-    
+
     //
     // Defaults
-    
+
 	$action     = 'invoke';
     $task_names = array('default');
     $trace      = false;
-    
+
     $args = $GLOBALS['argv'];
 	array_shift($args);
 	$parser = new phake\OptionParser($args);
@@ -34,16 +34,16 @@ try {
 				throw new Exception("Unknown command line option '$option'");
 		}
 	}
-	
+
 	$non_options = $parser->get_non_options();
 	if (count($non_options)) $task_names = $non_options;
-	
+
     //
     // Locate runfile
-    
+
     $runfile = phake\resolve_runfile(getcwd());
     $directory = dirname($runfile);
-    
+
 	if (!@chdir($directory)) {
         throw new Exception("Couldn't change to directory '$directory'");
     } else {
@@ -54,10 +54,10 @@ try {
 
     //
     // Go, go, go
-    
+
     $application = phake\Builder::$global->get_application();
     $application->reset();
-    
+
     switch ($action) {
         case 'list':
             $task_list = $application->get_task_list();

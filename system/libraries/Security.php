@@ -210,9 +210,9 @@ class CI_Security {
 		/*
 		 * Protect GET variables in URLs
 		 */
-		
+
 		 // 901119URL5918AMP18930PROTECT8198
-		
+
 		$str = preg_replace('|\&([a-z\_0-9\-]+)\=([a-z\_0-9\-]+)|i', $this->xss_hash()."\\1=\\2", $str);
 
 		/*
@@ -259,7 +259,7 @@ class CI_Security {
 		 */
 
 		$str = preg_replace_callback("/[a-z]+=([\'\"]).*?\\1/si", array($this, '_convert_attribute'), $str);
-	
+
 		$str = preg_replace_callback("/<\w+.*?(?=>|<|$)/si", array($this, '_decode_entity'), $str);
 
 		/*
@@ -715,7 +715,7 @@ class CI_Security {
 						"%3b",		// ;
 						"%3d"		// =
 					);
-		
+
 		if ( ! $relative_path)
 		{
 			$bad[] = './';

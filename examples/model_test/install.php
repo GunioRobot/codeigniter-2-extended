@@ -11,16 +11,16 @@ $CI->load->helper('file');
 echo "Creating table 'blogs'...\n";
 $fields = array(
 	"category_id" => array(
-		"type" => "INT", 
+		"type" => "INT",
 		"null" => FALSE
-	), 
+	),
 	"title" => array(
-		"type" => "VARCHAR", 
+		"type" => "VARCHAR",
 		"constraint" => "255"
-	), 
+	),
 	"created_at" => array(
 		"type" => "DATETIME"
-	), 
+	),
 	"updated_at" => array(
 		"type" => "DATETIME"
 	)
@@ -43,12 +43,12 @@ write_file('./application/models/blog.php', $model_file);
 echo "Creating table 'categories'...\n";
 $fields = array(
 	"title" => array(
-		"type" => "VARCHAR", 
+		"type" => "VARCHAR",
 		"constraint" => "255"
-	), 
+	),
 	"created_at" => array(
 		"type" => "DATETIME"
-	), 
+	),
 	"updated_at" => array(
 		"type" => "DATETIME"
 	)

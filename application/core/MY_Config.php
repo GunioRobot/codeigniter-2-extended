@@ -1,7 +1,7 @@
 <?php
 
 class MY_Config extends CI_Config {
-	
+
 	function site_url($uri = '')
 	{
 		if ($uri == '')
@@ -52,7 +52,7 @@ class MY_Config extends CI_Config {
 			}
 		}
 	}
-	
+
 }
 
 ?>
